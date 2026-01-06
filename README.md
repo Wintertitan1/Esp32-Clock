@@ -33,3 +33,21 @@ for other ESP32 + display projects.
 ## Notes
 - This code is provided as an example
 - Feel free to modify or remix for your own projects
+
+## Wiring
+
+### TFT Display (ST7789, SPI)
+| TFT Pin | ESP32 GPIO | Notes |
+|-------|------------|------|
+| VCC | 3.3V | Do NOT use 5V |
+| GND | GND | Common ground |
+| SCL | GPIO 18 | SPI Clock |
+| SDA | GPIO 23 | SPI MOSI |
+| CS  | GPIO 5  | Chip Select |
+| DC  | GPIO 16 | Data/Command |
+| RST | GPIO 17 | Reset |
+| BL  | GPIO 4  | Backlight (PWM) |
+
+### LDR (Photoresistor)
+Voltage divider:
+- 3.3V → LDR → GPIO 34 → 10kΩ → GND
